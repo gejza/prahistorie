@@ -18,9 +18,15 @@ int main(int argc,char * argv[])
 	Console con;
 	con.SetFileLogging("run.log");
 
-	Pra p(hInstance, &con);
-	p.CreateWin("Prahistorie Lida", 800, 600, false);
-	p.Run();
-	p.Destroy();
+	Pra app(hInstance, &con);
+	CVar::GetVar("engine")->Set(".dll");
+	if (!app.Init("Prahistorie Lida"))
+	{
+		app.HandleError();
+		return 0;
+	}
+
+	app.Run();
+	app.Destroy();
 	return 0;
 }
