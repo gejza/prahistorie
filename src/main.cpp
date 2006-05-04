@@ -19,13 +19,19 @@ int main(int argc,char * argv[])
 	con.SetFileLogging("run.log");
 
 	Pra app(hInstance, &con);
-	CVar::GetVar("engine")->Set(".dll");
+	CVar::GetVar("engine")->Set("../Hoe/bin/Hoe3Dd_D3D9.dll");
+	CVar::GetVar("height")->Set(600);
+	CVar::GetVar("width")->Set(800);
+	CVar::GetVar("fullscreen")->Set(false);
 	if (!app.Init("Prahistorie Lida"))
 	{
 		app.HandleError();
 		return 0;
 	}
-
+	app.GetFS()->AddResourceFile("data/tex.hx");
+	IHoeScene * s = app.GetEngine()->CreateScene(HOETS_NORMAL);
+	s->Set2DCallback(&app);
+	app.GetEngine()->SetActiveScene(s);
 	app.Run();
 	app.Destroy();
 	return 0;
