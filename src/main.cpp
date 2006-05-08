@@ -13,13 +13,13 @@ int WINAPI WinMain(HINSTANCE hInstance,HINSTANCE,LPSTR lpStr,int iCmdShow)
 int main(int argc,char * argv[])
 {
 	SetRootFromExe(argv[0]); 
-	//HOE_INSTANCE hInstance = NULL;
+	HOE_INSTANCE hInstance = NULL;
 #endif
 	Console con;
 	con.SetFileLogging("run.log");
 
 	Pra app(hInstance, &con);
-	CVar::GetVar("engine")->Set("../Hoe/bin/Hoe3Dd_D3D9.dll");
+	CVar::GetVar("engine")->Set("../Hoe/bin/Hoe3D.so");
 	CVar::GetVar("height")->Set(600);
 	CVar::GetVar("width")->Set(800);
 	CVar::GetVar("fullscreen")->Set(false);
