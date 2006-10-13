@@ -40,7 +40,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\Hoe\HoeGame;..\..\Hoe\Hoe3D\include"
+				AdditionalIncludeDirectories="..\..\Hoe\HoeGame\include;..\..\Hoe\HoeCore\include;..\..\Hoe\Hoe3D\include"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -119,7 +119,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="..\..\Hoe\HoeGame;..\..\Hoe\Hoe3D\include"
+				AdditionalIncludeDirectories="..\..\Hoe\HoeGame\include;..\..\Hoe\Hoe3D\include"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS"
 				RuntimeLibrary="0"
 				UsePrecompiledHeader="0"
