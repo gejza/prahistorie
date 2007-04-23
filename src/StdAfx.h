@@ -20,8 +20,11 @@
 #include <assert.h>
 #include <stdio.h>
 
+#include <hoe_core.h>
 #include <hoe_app.h>
 #include <hoe_utils.h>
+#include <hoe_view.h>
+#include <hoe_adventure.h>
 
 #endif // _STDAFX_H_
 

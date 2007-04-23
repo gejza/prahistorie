@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8,00"
-	Name="Prahistorie"
-	ProjectGUID="{B32750AC-DFF0-4DD5-A982-C45946659A1A}"
-	RootNamespace="Prahistorie"
+	Name="Theatre"
+	ProjectGUID="{9473988B-E9B3-44C3-935C-E335E04FA178}"
+	RootNamespace="Theatre"
 	Keyword="Win32Proj"
 	>
 	<Platforms>
@@ -20,7 +20,7 @@
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="1"
-			CharacterSet="1"
+			CharacterSet="0"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -40,8 +40,8 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\Hoe\HoeGame\include;..\..\Hoe\HoeCore\include;..\..\Hoe\Hoe3D\include"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS"
+				AdditionalIncludeDirectories="../../Hoe/Hoe3D/include;../../Hoe/HoeCore/include;../../Hoe/HoeGame/include;../../Hoe/HoeEditor/include"
+				PreprocessorDefinitions="_CRT_SECURE_NO_DEPRECATE;WXUSINGDLL"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -61,11 +61,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="..\..\Hoe\bin\HoeGame_d.lib Lua5.1.lib libfl.a"
-				OutputFile="..\$(ProjectName)_d.exe"
+				AdditionalDependencies="HoeCore_d.lib HoeGame_d.lib HoeUtils_d.lib HoeEditor_wxdll_d.lib Lua5.1.lib libfl.a wxbase28d.lib wxmsw28d_core.lib wxmsw28d_aui.lib wxmsw28d_adv.lib wxmsw28d_propgrid.lib wxbase28d_xml.lib wxexpatd.lib rpcrt4.lib comctl32.lib"
+				OutputFile="..\$(ProjectName).exe"
 				LinkIncremental="2"
-				IgnoreAllDefaultLibraries="false"
-				IgnoreDefaultLibraryNames="LIBCMT.lib"
+				AdditionalLibraryDirectories="../../Hoe/bin;../../Common\lib/wx_dll"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				TargetMachine="1"
@@ -100,7 +99,7 @@
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="1"
-			CharacterSet="1"
+			CharacterSet="0"
 			WholeProgramOptimization="1"
 			>
 			<Tool
@@ -120,9 +119,9 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="..\..\Hoe\HoeGame\include;..\..\Hoe\Hoe3D\include"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS"
-				RuntimeLibrary="0"
+				AdditionalIncludeDirectories="../../Hoe/Hoe3D/include;../../Hoe/HoeCore/include;../../Hoe/HoeGame/include;../../Hoe/HoeEditor/include"
+				PreprocessorDefinitions="_CRT_SECURE_NO_DEPRECATE;WXUSINGDLL"
+				RuntimeLibrary="2"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
@@ -139,9 +138,9 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="..\..\Hoe\bin\HoeGame.lib Lua5.1.lib libfl.a"
-				OutputFile="..\$(ProjectName).exe"
+				AdditionalDependencies="HoeCore.lib HoeUtils.lib HoeGame.lib HoeEditor_wxdll.lib libfl.a Lua5.1.lib wxbase28.lib wxmsw28_core.lib wxmsw28_adv.lib wxmsw28_aui.lib wxmsw28_propgrid.lib wxbase28_xml.lib wxmsw28_stc.lib wxexpat.lib rpcrt4.lib comctl32.lib User32.lib Gdi32.lib"
 				LinkIncremental="1"
+				AdditionalLibraryDirectories="../../Hoe/bin;../../Common\lib/wx_dll"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				OptimizeReferences="2"
@@ -177,36 +176,8 @@
 	<References>
 	</References>
 	<Files>
-		<Filter
-			Name="Resources"
-			>
-			<File
-				RelativePath="..\resource\prahistorie.ico"
-				>
-			</File>
-		</Filter>
 		<File
-			RelativePath="..\src\app.cpp"
-			>
-		</File>
-		<File
-			RelativePath="..\src\app.h"
-			>
-		</File>
-		<File
-			RelativePath="..\src\game.rc"
-			>
-		</File>
-		<File
-			RelativePath="..\src\main.cpp"
-			>
-		</File>
-		<File
-			RelativePath="..\src\resource.h"
-			>
-		</File>
-		<File
-			RelativePath="..\src\StdAfx.h"
+			RelativePath=".\main.cpp"
 			>
 		</File>
 	</Files>

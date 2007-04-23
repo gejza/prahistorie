@@ -1,5 +1,5 @@
-Prahistorie Lida
--------------
+Prahistorie Lida : remake
+----------------
 
 ovladani:
 myší co klik to nìco
