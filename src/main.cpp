@@ -62,7 +62,7 @@ int main(int argc,char * argv[])
 	con.SetFileLogging("run.log");
 
 	Pra app(hInstance, &con);
-	CVar::GetVar("engine")->Set("../Hoe/bin/Hoe3Dd_D3D9.dll");
+	CVar::GetVar("engine")->Set("../Hoe/bin/Hoe3D.so");
 	CVar::GetVar("height")->Set(600);
 	CVar::GetVar("width")->Set(800);
 	CVar::GetVar("fullscreen")->Set(false);
