@@ -218,7 +218,7 @@ Prahistorie_SOURCES = \
 src/main.cpp \
 src/app.cpp
 
-Prahistorie_LDADD = -ll $(HOE_LIB) -lHoeGame $(LUA_LIBS) -ldl -lbassmod -lX11 -lfl
+Prahistorie_LDADD = $(HOE_LIB) -lHoeGame -lHoeCore  -ll $(HOE_LIB) $(LUA_LIBS) -ldl -lbassmod -lX11 -lfl
 all: all-am
 
 .SUFFIXES:

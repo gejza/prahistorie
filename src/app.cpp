@@ -22,7 +22,7 @@ HoeGame::Adventure::Kulission * fig;
 
 void Pra::_Paint(IHoe2D *h)
 {
-	/*static IHoePicture * pic = (IHoePicture*)GetEngine()->Create("picture sc35");
+	static IHoePicture * pic = (IHoePicture*)GetEngine()->Create("picture sc35");
 	static IHoePicture * pic2 = (IHoePicture*)GetEngine()->Create("picture vlevo");
 	
 	h->SetRect(200,150);
@@ -30,7 +30,7 @@ void Pra::_Paint(IHoe2D *h)
 	h->BltFast(0,200,0,150,pic);
 	h->SetRect(200,150);
 	// vypocitat snimek
-	THoeRect d = { 100, 70, 125, 100};
+	/*THoeRect d = { 100, 70, 125, 100};
 	THoeRect s = { 1/8.f * i, 0, 1/8.f * (i+1), 1};
 	h->SetAlpha(true);
 	h->Blt(&d,pic2,&s);*/

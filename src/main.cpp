@@ -74,6 +74,7 @@ int main(int argc,char * argv[])
 	app.GetFS()->AddResourceFile("data/tex.hx");
 	app.GetFS()->AddResourceFile("data/angel.hm");
 	app.GetFS()->AddResourceFile("data/jackolan.hm");
+    app.GetEngine()->exec("showfps");
 	Theatre t;
 	t.Create();
 	t.Load("scene.theatre");
